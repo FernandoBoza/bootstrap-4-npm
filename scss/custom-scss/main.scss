@@ -1,11 +1,15 @@
-@import 'transitions';
-@import 'typed';
-
  //Place here your custom scss code
 
+@import 'transitions';
+
+$font: Raleway;
+
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: $font, sans-serif;
+    background: #fbffff;
+    color: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
 }
+h1 { text-shadow: rgba(0, 0, 0, .3) 0px 4px 5px; }
 
 .thin { font-weight: 300 !important; }
 
@@ -45,11 +49,12 @@ header.container {
             width: 100%;
             height: 250px;
             border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 20px 70px;
 
             rect {
                 width: 100%;
                 height: 100%;
-                fill: #222;
+                fill: rgba(#222, .8);
             }
         }
 
@@ -76,11 +81,11 @@ header.container {
             display: block;
             margin-bottom: 25px;
 
-            // .cursor {
-            //     border-right: 10px solid #cd1dbe;
-            //     display: inline;
-            //     padding-right: 10px;
-            // }
+            .cursor {
+                border-right: 10px solid #cd1dbe;
+                display: inline;
+                padding-right: 7px;
+            }
         }
     }
 }   
@@ -106,6 +111,40 @@ header.container {
 section.section1 {
     h3 {
         line-height: 3rem;
+    }
+
+    .btn {
+        font-size: 2rem;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            padding-left: 4rem;
+        }
+
+        &:hover .fa {
+            opacity: 1;
+            left: 5%;
+            margin: 3px 0 0 3px;
+        }
+    }
+
+    .fa {
+        color: white;
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        margin: 3px 0 0 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .btn-outline-primary {
+        border: 2px solid currentColor;
+        box-shadow: rgba(#333, .5) 4px 4px 4px;
+
+        &:hover {
+            border-color: #0275d8 !important
+        }
     }
 }
 
@@ -149,6 +188,12 @@ section.container-fluid.section2 {
     margin-top: 0;
 }
 
+
+p.footer {
+    font-size: 2rem;
+    margin: 0 auto;
+    display: block;
+}
 
 // Extra small devices (portrait phones, less than 576px)
 @media screen and (max-width: 575px) { 

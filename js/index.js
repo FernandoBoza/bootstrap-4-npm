@@ -10,22 +10,39 @@ $('[data-toggle="tooltip"]').tooltip()
 
 document.addEventListener('DOMContentLoaded', function(){
 
-    Typed.new("#typed", {
-        stringsElement: document.getElementById('typed-strings'),
-        typeSpeed: 130,
-        backDelay: 0,
+    Typed.new("#cmd-1", {
+        stringsElement: document.getElementById('typed-strings-1'),
+        typeSpeed: 30,
         startDelay: 0,
-        loop: false,
-        contentType: 'html', 
-        loopCount: null,
-        callback: function(){ foo(); },
+        // callback: function(){ foo(); },
+    });
+    
+    Typed.new("#cmd-2", {
+        stringsElement: document.getElementById('typed-strings-2'),
+        typeSpeed: 130,
+        startDelay: 2400,
+        // callback: function(){ foo(); },
+    });
+    
+    Typed.new("#cmd-3", {
+        stringsElement: document.getElementById('typed-strings-3'),
+        typeSpeed: 130,
+        startDelay: 4500,
+        // callback: function(){ foo(); },
+    });
+    
+    Typed.new("#cmd-4", {
+        stringsElement: document.getElementById('typed-strings-4'),
+        typeSpeed: 130,
+        startDelay: 5500,
+        // callback: function(){ foo(); },
     });
 });
 
 
-function foo(){ 
-    $("span.typed-cursor").removeClass("typed-cursor");
-}
+// function foo(){ 
+//     $("span#cmd-1").children('span').removeClass("cursor");
+// }
 
 
 
