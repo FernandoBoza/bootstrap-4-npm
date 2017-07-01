@@ -6,3 +6,49 @@
 .pulse {
     animation: pulse 1s infinite;
 }
+
+@keyframes heartbeat {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  14% {
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+  28% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  42% {
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  padding: 0 3px;
+}
+
+.heartbeat {
+    -webkit-animation: heartbeat 2s linear infinite;
+    -moz-animation: heartbeat 2s linear infinite;
+    -ms-animation: heartbeat 2s linear infinite;
+    -o-animation: heartbeat 2s linear infinite;
+    animation: heartbeat 2s linear infinite;
+}

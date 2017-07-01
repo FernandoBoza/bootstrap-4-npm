@@ -22,14 +22,41 @@ h1 { text-shadow: rgba(0, 0, 0, .3) 0px 4px 5px; }
         height: 100%;
 }
 
+.btn {
+        font-size: 2rem;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            padding-left: 4rem;
+        }
+
+        &:hover .fa {
+            opacity: 1;
+            left: 5%;
+            margin: 3px 0 0 3px;
+        }
+    }
+
+    .fa {
+        color: white;
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        margin: 3px 0 0 0;
+        transition: all 0.5s ease-in-out;
+    }
+
 header.container {
     background-image: linear-gradient(to right, #e0c3fc 0%, #8ec5fc 100%);
     // background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
     // background-image: linear-gradient(to bottom, #9795f0 0%, #fbc8d4 100%);
     padding: 0px;
     color: white;
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
+    
+    .row { margin-right: 0px;}
 
     .offset-md-1 {
         margin-top: 8rem;
@@ -113,31 +140,6 @@ section.section1 {
         line-height: 3rem;
     }
 
-    .btn {
-        font-size: 2rem;
-        position: relative;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-            padding-left: 4rem;
-        }
-
-        &:hover .fa {
-            opacity: 1;
-            left: 5%;
-            margin: 3px 0 0 3px;
-        }
-    }
-
-    .fa {
-        color: white;
-        position: absolute;
-        opacity: 0;
-        left: 0;
-        margin: 3px 0 0 0;
-        transition: all 0.5s ease-in-out;
-    }
-
     .btn-outline-primary {
         border: 2px solid currentColor;
         box-shadow: rgba(#333, .5) 4px 4px 4px;
@@ -158,15 +160,15 @@ section.section2 {
         margin-left: 35px;
     }
 
-    .offset-lg-1 { margin-left: 5.33333%}
+    // .offset-lg-1 { margin-left: 5.33333%}
 }
 
 section.section3 {
     h4 { line-height: 2.4rem;}
-    .offset-lg-1 {
-        margin-left: 6.33333%;
-        margin-right: 2%;
-    }
+    // .offset-lg-1 {
+    //     margin-left: 6.33333%;
+    //     margin-right: 2%;
+    // }
     .purple {
         display: block;
 
@@ -191,12 +193,23 @@ section.container-fluid.section2 {
 
 p.footer {
     font-size: 2rem;
-    margin: 0 auto;
-    display: block;
+    position: absolute;
+    top: 90%;
+    left: 35%;
+    a {
+        color: white !important;
+        text-decoration: none;
+        border-bottom: 2px solid white;
+    }
 }
 
 // Extra small devices (portrait phones, less than 576px)
 @media screen and (max-width: 575px) { 
+
+    .col-md-5 {
+        padding-left: 34px;
+    }
+
     section.section3 {
         .purple {
             h1 {
